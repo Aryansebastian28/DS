@@ -1,0 +1,160 @@
+1. Python Program to Count the Occurrence of Each Word in a Given Sentence
+python
+Copy code
+# Program to count the occurrence of each word in a sentence
+def count_words(sentence):
+    words = sentence.split()
+    word_count = {}
+
+    for word in words:
+        word = word.lower()  # Convert to lowercase to ensure case-insensitivity
+        if word in word_count:
+            word_count[word] += 1
+        else:
+            word_count[word] = 1
+    
+    return word_count
+
+# Input from the user
+sentence = input("Enter a sentence: ")
+result = count_words(sentence)
+
+# Display the result
+print("Word Occurrences:")
+for word, count in result.items():
+    print(f"{word}: {count}")
+2. Python Program to Print Factorial of a Number Using Recursion
+python
+Copy code
+# Function to calculate factorial using recursion
+def factorial(n):
+    if n == 0:  # Base case: factorial of 0 is 1
+        return 1
+    else:
+        return n * factorial(n - 1)  # Recursive case: n * (n-1)!
+
+# Get input from the user
+number = int(input("Enter a number to find its factorial: "))
+
+# Call the factorial function and display the result
+print(f"The factorial of {number} is {factorial(number)}")
+3. Python Program to Print Length of a String Using Recursion
+python
+Copy code
+# Function to calculate the length of a string using recursion
+def string_length(s):
+    if s == "":  # Base case: if the string is empty, return 0
+        return 0
+    else:
+        return 1 + string_length(s[1:])  # Recursive case: 1 + length of the rest of the string
+
+# Input from the user
+user_input = input("Enter a string: ")
+
+# Call the function and print the length
+length = string_length(user_input)
+print(f"The length of the string '{user_input}' is: {length}")
+4. Python Program to Print Prime Numbers Between 1 and 100
+python
+Copy code
+# Function to check if a number is prime
+def is_prime(num):
+    if num < 2:
+        return False
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+# Print prime numbers between 1 and 100
+print("Prime numbers between 1 and 100 are:")
+for number in range(1, 101):
+    if is_prime(number):
+        print(number, end=" ")
+5. Python Program to Check Whether a Number is Armstrong or Not
+python
+Copy code
+# Function to check if a number is Armstrong
+def is_armstrong(num):
+    # Convert number to string to count the number of digits
+    digits = str(num)
+    n = len(digits)
+    
+    sum_of_powers = sum(int(digit) ** n for digit in digits)
+    
+    if sum_of_powers == num:
+        return True
+    else:
+        return False
+
+# Input from the user
+number = int(input("Enter a number: "))
+
+# Check if the number is Armstrong
+if is_armstrong(number):
+    print(f"{number} is an Armstrong number.")
+else:
+    print(f"{number} is not an Armstrong number.")
+6. Python Program to Check Whether a Number is Harshad or Not
+python
+Copy code
+# Function to check if a number is Harshad
+def is_harshad(num):
+    sum_of_digits = sum(int(digit) for digit in str(num))
+    if num % sum_of_digits == 0:
+        return True
+    else:
+        return False
+
+# Input from the user
+number = int(input("Enter a number: "))
+
+# Check if the number is Harshad
+if is_harshad(number):
+    print(f"{number} is a Harshad number.")
+else:
+    print(f"{number} is not a Harshad number.")
+7. Python Program to Accept Input from User and Check Whether the Number is Armstrong or Not
+python
+Copy code
+# Function to check if a number is Armstrong
+def is_armstrong(num):
+    digits = str(num)
+    n = len(digits)
+    sum_of_powers = sum(int(digit) ** n for digit in digits)
+    
+    if sum_of_powers == num:
+        return True
+    else:
+        return False
+
+# Input from the user
+number = int(input("Enter a number: "))
+
+# Check if the number is Armstrong
+if is_armstrong(number):
+    print(f"{number} is an Armstrong number.")
+else:
+    print(f"{number} is not an Armstrong number.")
+8. Python Program to Accept Input from User and Check Whether the Number is Armstrong or Not
+python
+Copy code
+# Function to check if a number is Armstrong
+def is_armstrong(num):
+    digits = str(num)
+    n = len(digits)
+    sum_of_powers = sum(int(digit) ** n for digit in digits)
+    
+    if sum_of_powers == num:
+        return True
+    else:
+        return False
+
+# Input from the user
+number = int(input("Enter a number: "))
+
+# Check if the number is Armstrong
+if is_armstrong(number):
+    print(f"{number} is an Armstrong number.")
+else:
+    print(f"{number} is not an Armstrong number.")
